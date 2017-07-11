@@ -1,7 +1,7 @@
-FROM nextjournal/docker-erlang:19.2.1-test-server
+FROM nextjournal/docker-erlang:20.0
 MAINTAINER Holger Amann <holger@nextjournal.com>
 
-ARG ELIXIR_VERSION=1.4.2
+ARG ELIXIR_VERSION=1.4.5
 
 LABEL name="elixir" version=$ELIXIR_VERSION
 
