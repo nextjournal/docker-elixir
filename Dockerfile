@@ -34,14 +34,14 @@ RUN set -xe \
       /tmp/* \
       /usr/src
 
-ARG ELIXIR_VERSION=1.4.5
+ARG ELIXIR_VERSION=1.5.0
 
 RUN set -xe \
+    && apk --update add openssl ca-certificates \
     && wget --no-check-certificate https://github.com/elixir-lang/elixir/releases/download/v${ELIXIR_VERSION}/Precompiled.zip \
     && mkdir -p /opt/elixir-${ELIXIR_VERSION}/ \
     && unzip Precompiled.zip -d /opt/elixir-${ELIXIR_VERSION}/ \
     && rm Precompiled.zip \
-    && apk del build-dependencies \
     && rm -rf /etc/ssl \
     && rm -rf \
       /var/cache/apk/* \
