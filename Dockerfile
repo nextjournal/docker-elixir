@@ -34,7 +34,7 @@ RUN set -xe \
       /tmp/* \
       /usr/src
 
-ARG ELIXIR_VERSION=1.5.0
+ARG ELIXIR_VERSION=1.5.1
 
 RUN set -xe \
     && apk --update add openssl ca-certificates \
