@@ -1,7 +1,7 @@
 FROM alpine:3.6
 MAINTAINER Holger Amann <holger@nextjournal.com>
 
-ARG ERLANG_VERSION=20.0
+ARG ERLANG_VERSION=20.1
 
 ARG DISABLED_APPS='megaco wx debugger jinterface orber reltool observer gs et'
 ARG ERLANG_DOWNLOAD_URL="https://github.com/erlang/otp/archive/OTP-${ERLANG_VERSION}.tar.gz"
@@ -34,7 +34,7 @@ RUN set -xe \
       /tmp/* \
       /usr/src
 
-ARG ELIXIR_VERSION=1.5.1
+ARG ELIXIR_VERSION=1.5.2
 
 RUN set -xe \
     && apk --update add openssl ca-certificates \
